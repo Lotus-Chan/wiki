@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+<!--protect-->
+{% block title %} Create New Page {% endblock %}
+<!--protect-->
+{% block body %}
+
+<h1>Create New Wiki</h1>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Submit New Wiki</button>
+</form>
+
+{% endblock %}
